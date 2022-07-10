@@ -1,7 +1,7 @@
 
 import java.util.Scanner;
 
-public class ProgramThreeDFSAndBFS {
+public class DFSAndBFS {
     static int count=0;
 
     static void DFS(boolean[][] adj_mat, byte nov, boolean[] ver_mat, byte vtd){
