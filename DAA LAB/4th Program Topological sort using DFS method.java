@@ -15,7 +15,7 @@ Graph is not connected and there are 2 components of it
 
 import java.util.Scanner;
 
-public class FourthProgramTopologicalSortUsingDFS {
+public class TopologicalSortUsingDFS {
     static byte nov,count=0,ptr=-1;
     // ptr --> pointer to the array to store at specified location
     // count --> to check whether the graph is connected or not
