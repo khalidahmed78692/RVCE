@@ -71,3 +71,15 @@ public class FifthProgramPackagesAndInterfaces {
 //        b.action();
     }
 }
+
+/*
+Output of the code:
+1 Lion: Hunting
+Roaring
+Roaming
+Runs swiftly
+2 Snake: Swallowing
+Hissing
+Sleeping
+Crawls on the ground
+*/
