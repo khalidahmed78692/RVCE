@@ -1,3 +1,4 @@
+; this program is to convert the given code to assembly code
 	AREA RESET,CODE
 	ENTRY
 	
