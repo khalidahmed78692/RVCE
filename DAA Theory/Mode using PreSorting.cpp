@@ -41,7 +41,7 @@ int mode(int a[], int n)
     for (i = 0; i < n; i++)
     {
         runlen = 1;
-        runval = a[i];
+        runval = a[i]; // runval variable is not required actually, just to clearly understand the algo, this is written.
         while (i + runlen < n && a[i + runlen] == runval)
             runlen += 1;
         if (runlen > modfreq)
