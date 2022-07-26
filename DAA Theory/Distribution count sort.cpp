@@ -18,7 +18,8 @@ int main()
     // check the frequencies of the unique elements and place it in D matrix
     for (i = 0; i < n; i++)
         D[a[i] - l]++;
-    // for first element frequency and Distribution values are same, now from second element add the Distribution value of it's just previous element and current value frequency to get the distribution value of current element
+    // for first element frequency and Distribution values are same, now from second element add the Distribution value of it's just previous element and current value
+    // frequency to get the distribution value of current element
     for (i = 1; i <= u - l; i++)
         D[i] += D[i-1];
     // now place the elements in to an array S, such that it is sorted
