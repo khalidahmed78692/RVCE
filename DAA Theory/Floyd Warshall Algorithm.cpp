@@ -2,32 +2,14 @@
 #include <climits>
 using namespace std;
 
-void Floyd_Warshall(int wg[15][15], int n)
+void Floyd_Warshall(int D[15][15], int n)
 {
-    int D[15][15], i, j, k;
-    // copy weighted graph to D matrix
-    for (i = 1; i <= n; i++)
-        for (j = 1; j <= n; j++)
-            D[i][j] = wg[i][j];
     // finding the shortest path
-    for (i = 1; i <= n; i++)
-        for (j = 1; j <= n; j++)
-            for (k = 1; k <= n; k++)
+    for (int i = 1; i <= n; i++)
+        for (int j = 1; j <= n; j++)
+            for (int k = 1; k <= n; k++)
                 if (D[i][j] > D[i][k] + D[k][j])
                     D[i][j] = D[i][k] + D[k][j];
-    // Printing the all shortest path matrix
-    cout << "All Shortest path weighted graph in the form of matrix is:";
-    for (i = 1; i <= n; i++)
-    {
-        cout << endl;
-        for (j = 1; j <= n; j++)
-        {
-            if (D[i][j] == 99999)
-                cout << "INF\t";
-            else
-                cout << D[i][j] << "\t";
-        }
-    }
 }
 
 int main()
@@ -35,14 +17,23 @@ int main()
     int n;
     cout << "Enter the number of vertices: ";
     cin >> n;
-    int i, j, wgraph[15][15], temp;
+    int i, j, D[15][15];
     cout << "Enter the weighted graph (for infinity enter 99999):\n";
     for (i = 1; i <= n; i++)
         for (j = 1; j <= n; j++)
-        {
-            cin >> wgraph[i][j];
-        }
-    Floyd_Warshall(wgraph, n);
+            cin >> D[i][j];
+    Floyd_Warshall(D, n);
+    // Printing the all shortest path matrix
+    cout << "All Shortest path weighted graph in the form of matrix is:";
+    for (i = 1; i <= n; i++)
+    {
+        cout << endl;
+        for (j = 1; j <= n; j++)
+            if (D[i][j] == 99999)
+                cout << "INF\t";
+            else
+                cout << D[i][j] << "\t";
+    }
 }
 
 /*
