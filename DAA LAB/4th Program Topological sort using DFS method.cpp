@@ -1,17 +1,9 @@
-/* 
-output of the code
-Enter the number of vertices: 7
-Enter the adjacency matrix (7 x 7):
-0 1 1 0 0 0 0
-0 0 0 0 1 0 1
-0 0 0 0 0 1 0
-1 1 1 0 0 1 1
-0 0 0 0 0 0 0
-0 0 0 0 0 0 0
-0 0 0 0 1 1 0
-Popping order is: 5 6 7 2 3 1 4 
-Topological ordering / sort is: 4 1 3 2 7 6 5 
-Graph is not connected and there are 2 components of it
+/*  This program is to find the topological ordering of a connected graph. For disconnected graphs there could be many possible topological ordering.
+    ex:- there are three nodes 1,2 and 3, and only 2nd is connected to third node i.e. 2-->3, then there could be the following topological orderings
+    1) 1-->2-->3
+    2) 2-->3-->1
+    3) 2-->1-->3. this is ofcourse correct because in this topological ordering 2nd node should always be before 3rd node, there is no any rule that 2nd should be 
+                    immediate before 3rd.
 */
 
 #include <iostream>
