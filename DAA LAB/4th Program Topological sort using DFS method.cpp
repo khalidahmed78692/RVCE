@@ -77,3 +77,20 @@ int main()
     else
         cout << "Graph is not connected and there are " << count << " components of it";
 }
+
+
+/* 
+output of the code
+Enter the number of vertices: 7
+Enter the adjacency matrix (7 x 7):
+0 1 1 0 0 0 0
+0 0 0 0 1 0 1
+0 0 0 0 0 1 0
+1 1 1 0 0 1 1
+0 0 0 0 0 0 0
+0 0 0 0 0 0 0
+0 0 0 0 1 1 0
+Popping order is: 5 6 7 2 3 1 4 
+Topological ordering / sort is: 4 1 3 2 7 6 5 
+Graph is not connected and there are 2 components of it
+*/
