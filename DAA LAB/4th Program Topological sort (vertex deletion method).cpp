@@ -39,10 +39,16 @@ int main()
 
 
 /*
-
 Output of the code:
 
-
-
+Enter the number of vertices: 7
+0 1 1 0 0 0 0
+0 0 0 0 1 0 1
+0 0 0 0 0 1 0
+1 1 1 0 0 1 1
+0 0 0 0 0 0 0
+0 0 0 0 0 0 0
+0 0 0 0 1 1 0
+Topological sort is:    4       1       2       3       7       5       6
 
 */
