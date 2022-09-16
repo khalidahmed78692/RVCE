@@ -34,17 +34,18 @@ void BFS(bool adj_mat[10][10], int nov, bool ver_mat[10], int vtd)
 
 int main()
 {
+    cout<<"\n\n|DFS Traversal|\n\n";
     int nov;
     cout << "Enter the number of vertices: ";
     cin >> nov;
     bool adj_mat[10][10], ver_mat[10];
     int i, j;
     cout << "Enter adjacency matrix ( " << nov << " x " << nov << " elements) :\n";
-    for (i = 0; i < nov; i++)
+    for (i = 0; i < nov; i++){
         for (j = 0; j < nov; j++)
             cin >> adj_mat[i][j];
-    for (i = 0; i < nov; i++)
         ver_mat[i] = false;
+    }
     cout << "DFS order is: ";
     for (i = 0; i < nov; i++)
         if (!ver_mat[i])
@@ -56,7 +57,10 @@ int main()
     if (count == 1)
         cout << "\nGraph is connected\n";
     else
-        cout << "\nGraph is not connected and there are " << count << " components of it\n";
+        cout << "\nGraph is not connected and it has " << count << " components\n";
+    
+    
+    cout<<"\n\n|BFS Traversal|\n\n";
     count = 0;
     for (i = 0; i < nov; i++)
         ver_mat[i] = false;
