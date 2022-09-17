@@ -50,6 +50,8 @@ int main()
 
 /*
 
+Output of the code:
+
 Enter the number of vertices: 9
 Enter the weighted matrix of 9x9 elements
 0 4 0 0 0 0 0 8 0
@@ -71,5 +73,23 @@ The MST edges are:
 7) Edges (2,3) = 7
 8) Edges (3,4) = 9
 The minimum cost of the MST is: 37
+
+
+
+Enter the number of vertices: 6
+Enter 6x6=36 elements:
+0 3 0 0 5 6
+3 0 1 0 4 0
+0 1 0 6 4 0
+0 0 6 0 5 3
+5 4 4 5 0 2
+6 0 0 3 2 0
+Edges included in the MST are:
+1) Edge(1,2) = 3
+2) Edge(2,3) = 1
+3) Edge(2,5) = 4
+4) Edge(5,6) = 2
+5) Edge(6,4) = 3
+Cost of constructing MST is: 13
 
 */
