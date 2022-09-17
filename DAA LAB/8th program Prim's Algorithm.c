@@ -8,14 +8,14 @@ void prims(int wm[n][n], int n)
 {
     int i, j, u, v, min, mincost = 0, ne = 1;
     bool visited[n];
-    for (i = 0; i < n; i++)
+    for (i = 1; i <= n; i++)
         visited[i] = false;
-    visited[0] = true;
+    visited[1] = true;
     printf("The MST edges are:\n");
     while (ne < n)
     {
-        for (i = 0, min = INT_MAX; i < n; i++)
-            for (j = 0; j < n; j++)
+        for (i = 1, min = INT_MAX; i <= n; i++)
+            for (j = 1; j <= n; j++)
                 if (wm[i][j] < min)
                     if (!visited[i])
                         continue;
@@ -42,8 +42,8 @@ int main()
     scanf("%d", &n);
     int i, j, wgt_mat[n][n];
     printf("Enter the weighted matrix of %dx%d elements\n", n, n);
-    for (i = 0; i < n; i++)
-        for (j = 0; j < n; j++)
+    for (i = 1; i <= n; i++)
+        for (j = 1; j <= n; j++)
         {
             scanf("%d", &wgt_mat[i][j]);
             if (!wgt_mat[i][j])
