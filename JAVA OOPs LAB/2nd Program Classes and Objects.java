@@ -45,7 +45,7 @@ class Employee{
     }
 }
 
-public class Program2 {
+public class Program2 {                                      // make file name as Program2.java
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter the number of objects: ");
