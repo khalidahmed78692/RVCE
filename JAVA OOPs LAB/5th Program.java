@@ -21,7 +21,7 @@ class Lion implements TiredAnimal{
     public void action(){
         System.out.println("Roaming");
     }
-    void lDescription(){
+    void lionDescription(){
         System.out.println("Runs swiftly");
     }
 
@@ -39,7 +39,7 @@ class Snake implements TiredAnimal{
     public void action(){
         System.out.println("Sleeping");
     }
-    void sDescription(){
+    void snakeDescription(){
         System.out.println("Crawls on the ground");
     }
 
@@ -53,12 +53,13 @@ public class FifthProgramPackagesAndInterfaces {
         l.eat();
         l.sound();
         l.action();
-        l.lDescription();
+        l.lionDescription();
+        
         System.out.print(s.i+" ");
         s.eat();
         s.sound();
         s.action();
-        s.sDescription();
+        s.snakeDescription();
         
         
         // after implementing below code, you will get no warnings, because we implementing even interface methods, so no warnings.
