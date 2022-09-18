@@ -1,4 +1,4 @@
-; this program is to subtract 32-bit numbers from memory because immediate mode only supports 8-bits
+; this program is to subtract 32-bit numbers from memory because immediate mode supports only 8-bits
 	AREA RESET,CODE
 	ENTRY
 	
