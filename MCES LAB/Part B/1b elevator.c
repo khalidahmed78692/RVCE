@@ -5,7 +5,7 @@
 
 void delay_ms(unsigned int i){
 	for(int j=0;j<i;j++)
-	    for(int k=0;k<1000;k++);
+	    for(int k=0;k<10000;k++);
 }
 
 void elevator_run(void);
@@ -46,7 +46,7 @@ void elevator_run(){
 				val=10;
 			
 			for(i=0;i<val;i++){
-				 IO0CLR=0X000F0000;
+				IO0CLR=0X000F0000;
 				IO0SET=i<<16;
 				delay_ms(250);
 			}
