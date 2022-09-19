@@ -33,3 +33,17 @@ void delay_ms(unsigned int j){
   for(i=0;i<j;i++)
     for(x=0; x<10000; x++);
 }
+
+void SystemInit(void)
+{
+  PLL0CON = 0x01;
+  PLL0CFG = 0x24;
+  PLL0FEED = 0xAA;
+  PLL0FEED = 0x55;
+  while( !( PLL0STAT & PLOCK ))
+   { ; }
+  PLL0CON = 0x03;
+  PLL0FEED = 0xAA; // lock the PLL registers after setting the required PLL
+  PLL0FEED = 0x55;
+  VPBDIV = 0x01; // PCLK is same as CCLK i.e 60Mhz
+}
