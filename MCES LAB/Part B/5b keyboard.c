@@ -66,3 +66,14 @@ void uart_init(void){
 	U0LCR=0X03;
 	U0FCR=0X07;
 }
+
+void SystemInit(void){
+	PLL0CON=0X01;
+	PLL0CFG=0X24;
+	PLL0FEED=0XAA;
+	PLL0FEED=0X55;
+	while(!(PLL0STAT&PLOCK)){;}
+	PLL0CON=0X03;
+	PLL0FEED=0XAA;
+	PLL0FEED=0X55;
+}
