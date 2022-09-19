@@ -24,6 +24,6 @@ void delay_ms(unsigned int j) // assume delay_ms(1) produces 1ms
 {
   unsigned int x, i;
   for(i=0; i<j; i++){
-    for(x=0; x<1000; x++);
+    for(x=0; x<10000; x++);
   }
 }
