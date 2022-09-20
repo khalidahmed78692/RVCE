@@ -22,7 +22,7 @@ public class Program8{
             while(t>0)
             {
                 n*=10;
-                n+=t/10;
+                n+=t%10;
                 t/=10;
             }
             return a==n;
