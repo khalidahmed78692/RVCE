@@ -14,7 +14,7 @@ class Arrays{
             System.out.println("List items are: "+list);
     }
 
-    public void toArray(){
+    public void toarray(){
         if(list.size()==0)
             System.out.println("Empty list");
         else{
@@ -92,7 +92,7 @@ public class Program9 {
                     obj.displayItems();
                     break;
                 case 3:
-                    obj.toArray();
+                    obj.toarray();
                     break;
                 case 4:
                     obj.revList();
