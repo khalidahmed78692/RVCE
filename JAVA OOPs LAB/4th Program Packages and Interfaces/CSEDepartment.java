@@ -20,7 +20,7 @@ class CseDept extends ThirdSem{
 
     private void privateMethod(){
 //        super.privateMethod();// private method cannot be accessed from different package, or subclass, or world
-        System.out.println("Protected method is overriding");
+        System.out.println("Private method is overriding");
     }
 
     void display(){
