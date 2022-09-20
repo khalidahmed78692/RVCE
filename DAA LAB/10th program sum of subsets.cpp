@@ -39,7 +39,7 @@ int main()
     }
     cout << "Enter the subset value that you want: ";
     cin >> d;
-    if (sum < d && w[1] > d)
+    if (sum < d || w[1] > d)
     {
         cout << "No solutions";
         exit(0);
