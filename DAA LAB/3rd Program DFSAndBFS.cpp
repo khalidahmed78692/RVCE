@@ -84,6 +84,7 @@ int main()
 
 Output of the code:
 
+||DFS Traversal||
 Enter the number of vertices: 10
 Enter adjacency matrix
 0 0 1 1 1 0 0 0 0 0
@@ -97,18 +98,35 @@ Enter adjacency matrix
 0 0 0 0 0 0 0 1 0 1
 0 0 0 0 0 0 1 0 1 0
 DFS traversal is: 1 3 6 5 2 4 7 8 9 10
+Graph is not connected and there are 2 components
+
+||BFS Traversal||
+BFS traversal is: 1 3 4 5 6 2 7 8 10 9
+Graph is not connected and there are 2 components
 
 
+
+
+|DFS Traversal|
 
 Enter the number of vertices: 7
-Enter adjacency matrix
+Enter adjacency matrix ( 7 x 7 elements) :
 0 1 1 1 1 0 0
 1 0 0 1 0 1 0
 1 0 0 0 0 0 1
 1 1 0 0 0 1 0
 1 0 0 0 0 0 1
-0 1 0 1 0 0 0 
+0 1 0 1 0 0 0
 0 0 1 0 1 0 0
-DFS traversal is: 1 2 4 6 3 7 5
+DFS order is: 1 2 4 6 3 7 5 
+Graph is connected
+
+
+|BFS Traversal|
+
+
+BFS order is: 1 2 3 4 5 6 7
+Graph is connected
+
 
 */
