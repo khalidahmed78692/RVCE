@@ -9,7 +9,7 @@
 #include <iostream>
 using namespace std;
 
-int count = 0, pop_array[10], ptr = -1;
+int pop_array[10], ptr = -1;
 // pop_array[] --> to store the popping order of the DFS method
 // ptr --> pointer to the array to store at specified location 
 // count --> to check whether the graph is connected or not 
@@ -35,10 +35,7 @@ void DFS(bool adj[10][10], int nov)
     cout << "Popping order is: ";
     for (i = 0; i < nov; i++) // this is just DFS traversal, when in dfs function dead end is reached, then print the dead end in dfs function
         if (!ver_mat[i])
-        {
             dfs(adj, nov, ver_mat, i);
-            count++;
-        }
 }
 
 int main()
@@ -71,18 +68,25 @@ int main()
 
     for (i = ptr; i >= 0; i--)
         cout << pop_array[i] + 1 << " ";
-    cout << endl;
-    if (count == 1)
-        cout << "Graph is connected";
-    else
-        cout << "Graph is not connected and there are " << count << " components of it";
 }
 
 
 /* 
 output of the code
+
+Enter the number of vertices: 4
+Enter the adjacency matrix ( 4 x 4 elements)
+0 1 0 1
+0 0 0 1
+0 0 0 0
+0 0 1 0
+Popping order is: 3 4 2 1
+Topological sort is: 1 2 4 3
+
+
+
 Enter the number of vertices: 7
-Enter the adjacency matrix (7 x 7):
+Enter the adjacency matrix ( 7 x 7 elements)
 0 1 1 0 0 0 0
 0 0 0 0 1 0 1
 0 0 0 0 0 1 0
@@ -90,7 +94,7 @@ Enter the adjacency matrix (7 x 7):
 0 0 0 0 0 0 0
 0 0 0 0 0 0 0
 0 0 0 0 1 1 0
-Popping order is: 5 6 7 2 3 1 4 
-Topological ordering / sort is: 4 1 3 2 7 6 5 
-Graph is not connected and there are 2 components of it
+Popping order is: 5 6 7 2 3 1 4
+Topological sort is: 4 1 3 2 7 6 5
+
 */
