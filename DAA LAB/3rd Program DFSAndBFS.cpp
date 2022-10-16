@@ -77,3 +77,38 @@ int main()
     else
         cout << "\nGraph is not connected and there are " << count << " components of it";
 }
+
+
+
+/*
+
+Output of the code:
+
+Enter the number of vertices: 10
+Enter adjacency matrix
+0 0 1 1 1 0 0 0 0 0
+0 0 0 0 1 0 0 0 0 0
+1 0 0 0 0 1 0 0 0 0
+1 0 0 0 0 0 0 0 0 0
+1 1 0 0 0 1 0 0 0 0
+0 0 1 0 1 0 0 0 0 0
+0 0 0 0 0 0 0 1 0 1
+0 0 0 0 0 0 1 0 1 0
+0 0 0 0 0 0 0 1 0 1
+0 0 0 0 0 0 1 0 1 0
+DFS traversal is: 1 3 6 5 2 4 7 8 9 10
+
+
+
+Enter the number of vertices: 7
+Enter adjacency matrix
+0 1 1 1 1 0 0
+1 0 0 1 0 1 0
+1 0 0 0 0 0 1
+1 1 0 0 0 1 0
+1 0 0 0 0 0 1
+0 1 0 1 0 0 0 
+0 0 1 0 1 0 0
+DFS traversal is: 1 2 4 6 3 7 5
+
+*/
