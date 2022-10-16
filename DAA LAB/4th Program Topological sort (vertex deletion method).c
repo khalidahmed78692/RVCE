@@ -3,7 +3,7 @@
 
 int nov;
 
-void ver_del(bool adj[nov][nov], int nov, int indeg[nov], int i)
+void ver_del(bool adj[nov][nov], int indeg[nov], int i)
 {
     indeg[i] = -1;
     printf("%d ", i + 1);
@@ -36,11 +36,9 @@ int main()
     printf("\nTopological sort is: ");
     for (i = 0; i < nov; i++)
     {
-        if (i == nov)
-            break;
         if (indeg[i] == 0)
         {
-            ver_del(adj, nov, indeg, i);
+            ver_del(adj, indeg, i);
             i = -1;
         }
     }
@@ -51,6 +49,27 @@ int main()
 
 Output of the code:
 
+Enter the number of vertices: 4
+Enter the adjacency matrix:
+0 1 0 1
+0 0 0 1
+0 0 0 0
+0 0 1 0
+Initial indegrees: 0 1 1 2
+Topological sort is: 1 2 4 3
 
+
+
+Enter the number of vertices: 7
+Enter the adjacency matrix:
+0 1 1 0 0 0 0
+0 0 0 0 1 0 1
+0 0 0 0 0 1 0
+1 1 1 0 0 1 1
+0 0 0 0 0 0 0
+0 0 0 0 0 0 0
+0 0 0 0 1 1 0
+Initial indegrees: 1 2 2 0 2 3 2 
+Topological sort is: 4 1 2 3 7 5 6
 
 */
